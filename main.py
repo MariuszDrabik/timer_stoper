@@ -1,6 +1,6 @@
 from kivy.app import App
 from kivy.lang import Builder
-from kivy.properties import BooleanProperty, StringProperty
+from kivy.properties import BooleanProperty, StringProperty, NumericProperty
 from kivy.uix.label import Label
 from kivy.clock import Clock
 from kivy.uix.gridlayout import GridLayout
@@ -17,6 +17,7 @@ class Timer(GridLayout):
     count_enable = BooleanProperty(False)
     button_enable = BooleanProperty(False)
     clock_label = StringProperty("0")
+    slider = NumericProperty(0)
     button_text = StringProperty("Start")
     text_input_str = StringProperty("Foo")
 
