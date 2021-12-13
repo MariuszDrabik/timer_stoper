@@ -1,0 +1,24 @@
+<Timer>:
+    cols: 1
+    TextInput:
+        id: text_input
+        size_hint: None, 0.25
+        pos_hint:
+        width: "200dp"
+        text: 'Podaj czas w sekundach'
+        multiline: False
+        on_text_validate: root.on_text_validate(self)
+    Label:
+        id: 1
+        font_name: "fonts/Lcd.ttf"
+        font_size: "80dp"
+        color: 1, .5, 1, 1
+        text: root.clock_label
+    Button:
+        id: button_id
+        text: root.button_text
+        on_press: root.start_counting()
+        disabled: not root.button_enable
+    # ProgressBar:
+    #     max: 100
+    #     # value: int(my_slider.value)
