@@ -17,12 +17,12 @@ class Timer(GridLayout):
     count_enable = BooleanProperty(False)
     button_enable = BooleanProperty(False)
     clock_label = StringProperty("0")
+    max_slider = NumericProperty(0)
     slider = NumericProperty(0)
     button_text = StringProperty("Start")
     text_input_str = StringProperty("Foo")
 
     def start_counting(self):
-        
         if self.event and self.count_enable:
             self.count_enable = False
             self.event.cancel()
@@ -39,6 +39,8 @@ class Timer(GridLayout):
         print('onece', widget.text)
         try:
             self.count = int(widget.text)
+            self.max_slider = self.count
+            self.slider = self.count
             self.clock_label = str(timedelta(seconds=self.count))
             self.button_enable = True
         except ValueError as e:
@@ -48,9 +50,11 @@ class Timer(GridLayout):
     def callback_clock(self, dt):
         if self.count == 1:
             self.event.cancel()
+            self.button_text = 'Start'
             self.button_enable = False
         self.count = self.count - 1
         self.button_text = 'Pause'
+        self.slider = self.count
         self.clock_label = str(timedelta(seconds=self.count))
 
   

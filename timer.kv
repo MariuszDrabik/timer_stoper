@@ -20,5 +20,5 @@
         on_press: root.start_counting()
         disabled: not root.button_enable
     ProgressBar:
-        max: 100
+        max: root.max_slider
         value: int(root.slider)
