@@ -5,7 +5,7 @@ from kivy.uix.label import Label
 from kivy.clock import Clock
 from kivy.uix.gridlayout import GridLayout
 from datetime import datetime, timedelta
-#komment
+#kommentkl
 Builder.load_file("timer.kv")
 
 
