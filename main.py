@@ -11,6 +11,7 @@ from kivy.config import Config
 Builder.load_file("timer.kv")
 Config.set('graphics', 'width', '500')
 
+
 class Timer(GridLayout):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
