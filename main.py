@@ -5,9 +5,11 @@ from kivy.uix.label import Label
 from kivy.clock import Clock
 from kivy.uix.gridlayout import GridLayout
 from datetime import datetime, timedelta
-#kommentkl
-Builder.load_file("timer.kv")
+from kivy.config import Config
 
+
+Builder.load_file("timer.kv")
+Config.set('graphics', 'width', '500')
 
 class Timer(GridLayout):
     def __init__(self, **kwargs):
