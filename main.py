@@ -60,11 +60,9 @@ class Timer(GridLayout):
         self.slider = self.count
         self.clock_label = str(timedelta(seconds=self.count))
 
-  
-
 
 class ClockApp(App):
-    
+
     def build(self):
         self.manager = Timer()
         return self.manager
