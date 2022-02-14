@@ -1,2 +1,2 @@
 # timer_stoper
-Stoper for firend
+Stoper for a friend
